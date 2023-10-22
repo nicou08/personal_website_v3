@@ -1,20 +1,33 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      spacing: {
+        "17": "60px",
+        "30": "120px",
+        "50": "200px",
+        "87": "21rem",
+        "88": "22rem",
+        "965": "26rem",
+        "97": "28rem",
+        "99": "32rem",
+      },
+      fontFamily: {
+        SFMono: ["SF Mono", "monospace"],
+        monaSans: ["Mona Sans", "monospace"],
+        gillSans: ["Gill Sans MT", "sans-serif"],
+        lucidaSans: ["Lucida Sans Unicode", "sans-serif"],
+        notoSans: ["Noto Sans JP", "sans-serif"],
+        notoSansBold: ["Noto Sans JP Bold", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

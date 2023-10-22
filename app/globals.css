@@ -3,3 +3,30 @@
 @tailwind utilities;
 
 
+/* html, body {
+  background-color: #030718;
+
+} */
+
+.bg-gradient-45 {
+  /* background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab); */
+  /* background-image: linear-gradient(45deg, #6b21a8, #064e3b, #155e75, #9f1239); */
+  background-image: linear-gradient(45deg, #6b21a8, #065f46, #082f49, #e11d48);
+  background-size: 300% 300%;
+}
+
+.animate-color {
+  animation: color 20s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
