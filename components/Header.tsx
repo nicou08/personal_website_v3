@@ -1,15 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
-import logoImage from "@/public/favicon_io/apple-touch-icon.png";
-
-const Header = () => {
+const Header = ({ activeSection }: { activeSection: string | null }) => {
+  const [hoverSection, setHoverSection] = useState<string | null>(null);
   return (
-    <div className="flex flex-col pl-10 pr-10 pt-10 w-full lg:w-99 h-[600px] lg:h-screen sticky top-0 flex-shrink-0 ">
+    <div className="bg-stone-800 bg-opacity-20 flex flex-col pl-5 pr-5 md:pl-10 md:pr-10 pt-0 md:pt-10 pb-20 lg:pb-0 w-full xl:w-99 xl:h-screen xl:sticky top-0 shrink-0 ">
       {/* INFO */}
       <div className="w-full ">
         <div className="flex justify-center w-full pt-20 pb-20">
-          <Image src={logoImage} alt="logo" width={100} height={100} />
+          <Image
+            src="/self_image_2.jpg"
+            width={352}
+            height={352}
+            alt="Self Image"
+            className="selfImage rounded-lg transform hover:translate-x-2 hover:-translate-y-2 transition-transform duration-300"
+          />
         </div>
         <div className="text-white text-5xl font-notoSans font-bold pb-5">
           Nicolas U. Guasca
@@ -63,20 +71,62 @@ const Header = () => {
         </Link>
       </div>
       {/* NAV BAR */}
-      <nav className=" pt-20">
+      <nav className=" pt-20 hidden xl:block">
         <ul className="space-y-3">
-          <li>
-            <Link href="#about" className="text-xl text-white font-gillSans">
+          <li className="flex">
+            {activeSection === "about" ? (
+              <div>
+                <div className="flex items-center h-full w-12 pr-4">
+                  <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
+                </div>{" "}
+              </div>
+            ) : (
+              <></>
+            )}
+            <Link
+              href="#about"
+              className={`text-xl font-gillSans ${
+                activeSection === "about" ? "text-white" : "text-zinc-400 "
+              }`}
+            >
               ABOUT
             </Link>
           </li>
-          <li>
-            <Link href="#projects" className="text-xl text-white font-gillSans">
+          <li className="flex">
+            {activeSection === "projects" ? (
+              <div>
+                <div className="flex items-center h-full w-12 pr-4">
+                  <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
+                </div>{" "}
+              </div>
+            ) : (
+              <></>
+            )}
+            <Link
+              href="#projects"
+              className={`text-xl font-gillSans ${
+                activeSection === "projects" ? "text-white" : "text-zinc-400 "
+              }`}
+            >
               PROJECTS
             </Link>
           </li>
-          <li>
-            <Link href="#contact" className="text-xl text-white font-gillSans">
+          <li className="flex">
+            {activeSection === "contact" ? (
+              <div>
+                <div className="flex items-center h-full w-12 pr-4">
+                  <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
+                </div>{" "}
+              </div>
+            ) : (
+              <></>
+            )}
+            <Link
+              href="#contact"
+              className={`text-xl font-gillSans ${
+                activeSection === "contact" ? "text-white" : "text-zinc-400 "
+              }`}
+            >
               CONTACT
             </Link>
           </li>

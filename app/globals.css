@@ -8,6 +8,20 @@
 
 } */
 
+.selfImage {
+  width: 220px; /* equivalent to w-80 in Tailwind */
+  height: 220px; /* equivalent to h-80 in Tailwind */
+  object-fit: cover;
+  object-position: center center;
+}
+
+.selfImageSmall {
+  width: 180px; /* equivalent to w-80 in Tailwind */
+  height: 180px; /* equivalent to h-80 in Tailwind */
+  object-fit: cover;
+  object-position: center center;
+}
+
 .bg-gradient-45 {
   /* background-image: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab); */
   /* background-image: linear-gradient(45deg, #6b21a8, #064e3b, #155e75, #9f1239); */

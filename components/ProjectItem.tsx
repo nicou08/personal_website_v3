@@ -17,9 +17,9 @@ const ProjectItem = ({
   tags?: string[];
 }) => {
   return (
-    <div className="hover:bg-white hover:bg-opacity-10 w-full flex rounded-lg">
+    <div className="hover:bg-white hover:bg-opacity-10 w-full flex flex-col sm:flex-row rounded-lg">
       <div className="h-28 w-40 flex justify-center items-center flex-shrink-0">
-        <div className="h-16 rounded-md overflow-hidden">
+        <div className="h-24 sm:h-16 rounded-md overflow-hidden">
           <Image
             src={image}
             alt="Website"
