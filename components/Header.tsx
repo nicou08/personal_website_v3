@@ -74,18 +74,6 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
       <nav className=" pt-20 hidden xl:block">
         <ul className="space-y-3">
           <li className="flex">
-            {/* <div>
-              <div className="flex items-center h-full w-12 pr-4">
-                <span
-                  className={`absolute h-[2px] bg-white transition-all duration-1000 ease-in-out ${
-                    activeSection === "about" || hoverSection === "about"
-                      ? "w-full"
-                      : "w-0"
-                  }`}
-                ></span>
-              </div>
-            </div> */}
-
             <Link
               href="#about"
               className={`text-xl font-gillSans ${
