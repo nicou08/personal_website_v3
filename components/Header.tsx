@@ -74,26 +74,29 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
       <nav className=" pt-20 hidden xl:block">
         <ul className="space-y-3">
           <li className="flex">
-            {activeSection === "about" ? (
-              <div>
-                <div className="flex items-center h-full w-12 pr-4">
-                  <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
-                </div>{" "}
+            {/* <div>
+              <div className="flex items-center h-full w-12 pr-4">
+                <span
+                  className={`absolute h-[2px] bg-white transition-all duration-1000 ease-in-out ${
+                    activeSection === "about" || hoverSection === "about"
+                      ? "w-full"
+                      : "w-0"
+                  }`}
+                ></span>
               </div>
-            ) : (
-              <></>
-            )}
+            </div> */}
+
             <Link
               href="#about"
               className={`text-xl font-gillSans ${
                 activeSection === "about" ? "text-white" : "text-zinc-400 "
-              }`}
+              } ${hoverSection === "about" ? "hover:text-white" : ""}`}
             >
               ABOUT
             </Link>
           </li>
           <li className="flex">
-            {activeSection === "projects" ? (
+            {/* {activeSection === "projects" ? (
               <div>
                 <div className="flex items-center h-full w-12 pr-4">
                   <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
@@ -101,7 +104,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
               </div>
             ) : (
               <></>
-            )}
+            )} */}
             <Link
               href="#projects"
               className={`text-xl font-gillSans ${
@@ -112,7 +115,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
             </Link>
           </li>
           <li className="flex">
-            {activeSection === "contact" ? (
+            {/* {activeSection === "contact" ? (
               <div>
                 <div className="flex items-center h-full w-12 pr-4">
                   <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
@@ -120,7 +123,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
               </div>
             ) : (
               <></>
-            )}
+            )} */}
             <Link
               href="#contact"
               className={`text-xl font-gillSans ${
