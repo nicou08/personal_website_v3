@@ -8,6 +8,29 @@
 
 } */
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #808080;
+  opacity: 0.5;
+  border-radius: 30px;
+}
+
+
 .selfImage {
   width: 220px; /* equivalent to w-80 in Tailwind */
   height: 220px; /* equivalent to h-80 in Tailwind */
