@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Header = ({ activeSection }: { activeSection: string | null }) => {
-  const [hoverSection, setHoverSection] = useState<string | null>(null);
+  //const [hoverSection, setHoverSection] = useState<string | null>(null);
   return (
     <div className="bg-stone-800 bg-opacity-20 flex flex-col pl-5 pr-5 md:pl-10 md:pr-10 pt-0 md:pt-10 pb-20 lg:pb-0 w-full xl:w-99 xl:h-screen xl:sticky top-0 shrink-0 ">
       {/* INFO */}
@@ -78,21 +78,12 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
               href="#about"
               className={`text-xl font-gillSans ${
                 activeSection === "about" ? "text-white" : "text-zinc-400 "
-              } ${hoverSection === "about" ? "hover:text-white" : ""}`}
+              }`}
             >
               ABOUT
             </Link>
           </li>
           <li className="flex">
-            {/* {activeSection === "projects" ? (
-              <div>
-                <div className="flex items-center h-full w-12 pr-4">
-                  <div className="h-[2px] w-full bg-white rounded-full -mt-1"></div>
-                </div>{" "}
-              </div>
-            ) : (
-              <></>
-            )} */}
             <Link
               href="#projects"
               className={`text-xl font-gillSans ${
