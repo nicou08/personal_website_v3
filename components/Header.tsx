@@ -75,7 +75,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
         <ul className="space-y-3">
           <li className="flex">
             <Link
-              href="#about"
+              href="/#about"
               className={`text-xl font-gillSans ${
                 activeSection === "about" ? "text-white" : "text-zinc-400 "
               }`}
@@ -85,7 +85,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
           </li>
           <li className="flex">
             <Link
-              href="#projects"
+              href="/#projects"
               className={`text-xl font-gillSans ${
                 activeSection === "projects" ? "text-white" : "text-zinc-400 "
               }`}
@@ -104,7 +104,7 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
               <></>
             )} */}
             <Link
-              href="#contact"
+              href="/#contact"
               className={`text-xl font-gillSans ${
                 activeSection === "contact" ? "text-white" : "text-zinc-400 "
               }`}
