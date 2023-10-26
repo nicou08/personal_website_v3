@@ -124,15 +124,14 @@ const Header = ({
             ) : (
               <></>
             )} */}
-            <Link
+            <a
               href="#contact"
-              scroll={false}
               className={`text-xl font-gillSans ${
                 activeSection === "contact" ? "text-white" : "text-zinc-400 "
               }`}
             >
               CONTACT
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
