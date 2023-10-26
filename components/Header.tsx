@@ -2,10 +2,31 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { RefObject } from "react";
 
-const Header = ({ activeSection }: { activeSection: string | null }) => {
+type HeaderProps = {
+  aboutRef: RefObject<HTMLElement>;
+  projectsRef: RefObject<HTMLElement>;
+  contactRef: RefObject<HTMLElement>;
+  activeSection: string | null;
+};
+
+const Header = ({
+  aboutRef,
+  projectsRef,
+  contactRef,
+  activeSection,
+}: HeaderProps) => {
   //const [hoverSection, setHoverSection] = useState<string | null>(null);
+
+  // const handleClick =
+  //   (ref: RefObject<HTMLElement>) => (e: React.MouseEvent) => {
+  //     e.preventDefault();
+  //     if (ref.current) {
+  //       ref.current.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   };
+
   return (
     <div className="bg-stone-800 bg-opacity-20 flex flex-col pl-5 pr-5 md:pl-10 md:pr-10 pt-0 md:pt-10 pb-20 lg:pb-0 w-full xl:w-99 xl:h-screen xl:sticky top-0 shrink-0 ">
       {/* INFO */}
@@ -74,26 +95,24 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
       <nav className=" pt-20 hidden xl:block">
         <ul className="space-y-3">
           <li className="flex">
-            <Link
-              scroll={false}
-              href="/#about"
+            <a
+              href="#about"
               className={`text-xl font-gillSans ${
                 activeSection === "about" ? "text-white" : "text-zinc-400 "
               }`}
             >
               ABOUT
-            </Link>
+            </a>
           </li>
           <li className="flex">
-            <Link
-              scroll={false}
-              href="/#projects"
+            <a
+              href="#projects"
               className={`text-xl font-gillSans ${
                 activeSection === "projects" ? "text-white" : "text-zinc-400 "
               }`}
             >
               PROJECTS
-            </Link>
+            </a>
           </li>
           <li className="flex">
             {/* {activeSection === "contact" ? (
@@ -106,8 +125,8 @@ const Header = ({ activeSection }: { activeSection: string | null }) => {
               <></>
             )} */}
             <Link
+              href="#contact"
               scroll={false}
-              href="/#contact"
               className={`text-xl font-gillSans ${
                 activeSection === "contact" ? "text-white" : "text-zinc-400 "
               }`}

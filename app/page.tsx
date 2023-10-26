@@ -45,9 +45,9 @@ export default function Home() {
   return (
     <main className="flex flex-col xl:flex-row xl:justify-center">
       <Header
-        //aboutRef={aboutRef}
-        //projectsRef={projectsRef}
-        //contactRef={contactRef}
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
         activeSection={activeSection}
       />
       <MainContent
