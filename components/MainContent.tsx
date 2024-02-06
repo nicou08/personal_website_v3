@@ -43,6 +43,23 @@ const MainContent = ({ aboutRef, projectsRef, contactRef }: MainProps) => {
         <div className="text-stone-100 text-2xl font-gillSans">PROJECTS</div>
         <div className="flex flex-col w-full gap-4 pt-14">
           <ProjectItem
+            name="Ordering and Reservation Functional App"
+            image="/OrdineWelcomePage.jpg"
+            description="Transformed a high-fidelity prototype mobile app, ‘Ordine’, into a fully 
+            functional cross-platform application. Conducted extensive testing on personal devices (Expo Go) and Android 
+            emulators to ensure optional performance."
+            tags={["React Native", "Expo Router", "TypeScript", "Supabase"]}
+            github="https://github.com/nicou08/Ordine"
+          />
+          <ProjectItem
+            name="Ordering and Reservation Mobile App UI/UX"
+            image="/OrdinePic.png"
+            description="Created the UI of a mobile app idea named 'Ordine'. The app allows users to make resarvations and pre-order food at restaurants. Created various prototypes using technologies such as Figma."
+            link="https://cloudyyoung.github.io/ordine-ui-ux/"
+            tags={["Figma"]}
+            github="https://github.com/cloudyyoung/ordine-ui-ux"
+          />
+          <ProjectItem
             name="X-Bird Imitation"
             image="/XBirdPic.png"
             description="This is a X/Twitter Clone with a response mobile design. You can post Tweets/Posts, like posts, comment on posts, and follow other users."
@@ -64,14 +81,6 @@ const MainContent = ({ aboutRef, projectsRef, contactRef }: MainProps) => {
             description="Develped a website that allowed an administrator to set-up a questionnaire in a specific topic and analyze the results witht the following technologies: ASP.NET Core MVC, Microsoft SQL Server on Azure, and Google Pie Charts."
             tags={["ASP.NET", "C#", "Google Analytics"]}
             github="https://github.com/bryanlam549/CPSC571Project6"
-          />
-          <ProjectItem
-            name="Ordering and Reservation Mobile App UI/UX"
-            image="/OrdinePic.png"
-            description="Created the UI of a mobile app idea named 'Ordine'. The app allows users to make resarvations and pre-order food at restaurants. Created various prototypes using technologies such as Figma."
-            link="https://cloudyyoung.github.io/ordine-ui-ux/"
-            tags={["Figma"]}
-            github="https://github.com/cloudyyoung/ordine-ui-ux"
           />
           <ProjectItem
             name="Stadium Management System"

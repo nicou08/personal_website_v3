@@ -49,6 +49,44 @@ const ProjectItem = ({
           ))}
         </div>
         <div className="flex justify-end gap-5 h-7 mt-5">
+          {name === "Ordering and Reservation Functional App" ? (
+            <>
+              <Link
+                href="https://cloudyyoung.github.io/ordine-ui-ux/"
+                target="_blank"
+                className="relative h-full opacity-70 hover:opacity-100 transition duration-500"
+              >
+                <Image
+                  src="/FigmaLogo.png"
+                  alt="Fgima Icon"
+                  sizes="100vh"
+                  style={{
+                    width: "auto",
+                    height: "100%",
+                  }}
+                  width={0}
+                  height={0}
+                />
+              </Link>
+              <Link
+                href="https://1drv.ms/v/s!AnFJC4b4oZf2iwG6MGhFUGigbjeT?e=bg8p2Q"
+                target="_blank"
+                className="relative h-full opacity-70 hover:opacity-100 transition duration-500"
+              >
+                <Image
+                  src="/PlayButton.png"
+                  alt="Fgima Icon"
+                  sizes="100vh"
+                  style={{
+                    width: "auto",
+                    height: "100%",
+                  }}
+                  width={0}
+                  height={0}
+                />
+              </Link>
+            </>
+          ) : null}
           {link ? (
             <Link
               href={link}
