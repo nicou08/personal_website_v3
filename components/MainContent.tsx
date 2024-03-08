@@ -43,11 +43,19 @@ const MainContent = ({ aboutRef, projectsRef, contactRef }: MainProps) => {
         <div className="text-stone-100 text-2xl font-gillSans">PROJECTS</div>
         <div className="flex flex-col w-full gap-4 pt-14">
           <ProjectItem
+            name="Rate and Review Web App"
+            image="/RateReviewPic.png"
+            description="Rate & Review is a user-friendly platform for reviewing and rating shows and movies, offering a seamless experience for users to share their opinions and discover new entertainment content"
+            tags={["ASP.NET Core Blazor", "C#", "Azure", "MongoDB"]}
+            link="https://rateandreview.azurewebsites.net/"
+            github="https://github.com/nicou08/RateAndReview"
+          />
+          <ProjectItem
             name="Ordering and Reservation Functional App"
             image="/OrdineWelcomePage.jpg"
             description="Transformed a high-fidelity prototype mobile app, ‘Ordine’, into a fully 
             functional cross-platform application. Conducted extensive testing on personal devices (Expo Go) and Android 
-            emulators to ensure optional performance."
+            emulators to ensure optimal performance."
             tags={["React Native", "Expo Router", "TypeScript", "Supabase"]}
             github="https://github.com/nicou08/Ordine"
           />
